@@ -15,6 +15,7 @@ body {
     background-size: 100vw auto;
     background-repeat: no-repeat;
     font-family: "Helvetica", Arial, sans-serif;
+    position: relative;
 }
 
 @media only screen and (max-aspect-ratio: 4016/6016) {
@@ -26,17 +27,22 @@ body {
 a {
     text-decoration: inherit;
     color: inherit;
-    padding: 5px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px
+    padding: 20px;
+    height: 20vh;
+    min-height: 140px;
 }
 
-nav {
+header a {
+    padding: 5px;
+}
+
+header nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,4 +54,20 @@ nav {
 
 .sociallinks {
     flex-direction: column;
+}
+
+main {
+    width: 60vw;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    height: 60vh;
+}
+
+@media only screen and (max-height: 700px) {
+    main {
+    }
 }
