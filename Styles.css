@@ -23,10 +23,17 @@ body {
     }
 }
 
+a {
+    text-decoration: inherit;
+    color: inherit;
+    padding: 5px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    align-items: flex-start;
+    padding: 20px
 }
 
 nav {
@@ -35,14 +42,10 @@ nav {
     justify-content: center;
 }
 
-.topnav div {
-    margin: 0 30px;
+.topnav a {
+    margin: 0 10px;
 }
 
 .sociallinks {
     flex-direction: column;
-}
-
-.sociallinks div {
-    margin: 0 0 10px 0;
 }
