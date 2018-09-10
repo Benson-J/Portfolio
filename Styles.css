@@ -9,8 +9,18 @@ html {
 body {
     font-size: 2rem;
     color: #ffffff;
-    background: #000000;
+    background-image: url("https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?w=2008");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
     font-family: "Helvetica", Arial, sans-serif;
+}
+
+@media only screen and (max-aspect-ratio: 4016/6016) {
+    body {
+        background-size: auto 100vh;
+    }
 }
 
 header {
@@ -21,6 +31,8 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .topnav div {
@@ -32,5 +44,5 @@ nav {
 }
 
 .sociallinks div {
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
