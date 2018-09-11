@@ -80,13 +80,14 @@ main {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 5rem;
     height: 60vh;
 }
 
 span {
     display: block;
     max-width: 100%;
+    font-size: 5rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
