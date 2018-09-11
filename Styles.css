@@ -53,15 +53,14 @@ header a {
 }
 
 header nav {
-    /*display: -ms-flexbox;*/
     display: flex;
+    flex-wrap: wrap;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
 .topnav a {
     margin: 0 10px;
-    flex-wrap: wrap;
 }
 
 .sociallinks {
@@ -83,13 +82,6 @@ main {
     height: 60vh;
 }
 
-span {
-    display: block;
-    max-width: 100%;
-    font-size: 5rem;
-    text-align: center;
-}
-
 @media only screen and (max-width: 600px) {
     header {
         height: 140px;
@@ -106,3 +98,11 @@ span {
         width: 100vw
     }
 }
+
+span {
+    display: block;
+    max-width: 100%;
+    font-size: 5rem;
+    text-align: center;
+}
+
