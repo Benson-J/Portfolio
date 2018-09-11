@@ -9,13 +9,12 @@ html {
 body {
     font-size: 2rem;
     color: #ffffff;
-    background-image: url("https:images.unsplash.com/photo-1536559692556-79e8be88e8ab?w=2008");
+    background-image: url("BG.jpeg");
     background-position: center;
     background-attachment: fixed;
     background-size: 100vw auto;
     background-repeat: no-repeat;
     font-family: "Helvetica", Arial, sans-serif;
-    position: relative;
 }
 
 @media only screen and (max-aspect-ratio: 4016/6016) {
