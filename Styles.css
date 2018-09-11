@@ -9,7 +9,7 @@ html {
 body {
     font-size: 2rem;
     color: #ffffff;
-    background-image: url("https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?w=2008");
+    background-image: url("https:images.unsplash.com/photo-1536559692556-79e8be88e8ab?w=2008");
     background-position: center;
     background-attachment: fixed;
     background-size: 100vw auto;
@@ -31,8 +31,11 @@ a {
 
 header {
     display: flex;
+    -ms-display: -ms-flexbox;
     justify-content: space-between;
+    -ms-flex-pack: justify;
     align-items: flex-start;
+    -ms-flex-align: flex-start;
     padding: 20px;
     height: 20vh;
     min-height: 140px;
@@ -44,8 +47,10 @@ header a {
 
 header nav {
     display: flex;
+    -ms-display: -ms-flexbox;
     flex-wrap: wrap;
     justify-content: center;
+    -ms-flex-pack: center;
 }
 
 .topnav a {
@@ -59,17 +64,15 @@ header nav {
 main {
     width: 60vw;
     margin: auto;
-    display:flex;
+    display: flex;
+    -ms-display: -ms-flexbox;
     flex-wrap: wrap;
     justify-content: center;
+    -ms-flex-pack: center;
     align-items: center;
+    -ms-flex-align: center;
     font-size: 5rem;
     height: 60vh;
-}
-
-span {
-    display: inline-block;
-    word-break: break-word;
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,6 +81,7 @@ span {
     }
     main {
         align-items: flex-start;
+        -ms-flex-align: flex-start;
         width: 360px
     }
 }
