@@ -67,7 +67,16 @@ main {
     height: 60vh;
 }
 
-@media only screen and (max-height: 700px) {
+span {
+    display: inline-block;
+    word-break: break-word;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 140px;
+    }
     main {
+        align-items: flex-start;
     }
 }
