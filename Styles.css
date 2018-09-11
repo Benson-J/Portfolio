@@ -78,5 +78,12 @@ span {
     }
     main {
         align-items: flex-start;
+        width: 360px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    main {
+        width: 100vw
     }
 }
