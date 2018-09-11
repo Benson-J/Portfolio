@@ -31,14 +31,20 @@ a {
 
 header {
     display: flex;
-    -ms-display: -ms-flexbox;
+//    -ms-display: -ms-flexbox;
+//    -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-pack: justify;
+//    -ms-flex-align: flex-start;
     align-items: flex-start;
-    -ms-flex-align: flex-start;
     padding: 20px;
     height: 20vh;
     min-height: 140px;
+}
+
+.Homebutton {
+    font-family: "Brush Script MT", Arial, sans-serif;
+    font-size: 3rem;
+    width: 7rem;
 }
 
 header a {
@@ -47,10 +53,10 @@ header a {
 
 header nav {
     display: flex;
-    -ms-display: -ms-flexbox;
+//    -ms-display: -ms-flexbox;
     flex-wrap: wrap;
+//    -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-pack: center;
 }
 
 .topnav a {
@@ -59,18 +65,19 @@ header nav {
 
 .sociallinks {
     flex-direction: column;
+    width: 7rem;
 }
 
 main {
     width: 60vw;
     margin: auto;
     display: flex;
-    -ms-display: -ms-flexbox;
+//    -ms-display: -ms-flexbox;
     flex-wrap: wrap;
+//    -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-pack: center;
+//    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-align: center;
     font-size: 5rem;
     height: 60vh;
 }
@@ -80,8 +87,8 @@ main {
         height: 140px;
     }
     main {
+//        -ms-flex-align: flex-start;
         align-items: flex-start;
-        -ms-flex-align: flex-start;
         width: 360px
     }
 }
