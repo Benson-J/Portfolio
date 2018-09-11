@@ -10,6 +10,7 @@ body {
     font-size: 2rem;
     color: #ffffff;
     background-image: url("BG.jpeg");
+    /*https://images.unsplash.com/photo-1536559692556-79e8be88e8ab?w=2008*/
     background-position: center;
     background-attachment: fixed;
     background-size: 100vw auto;
@@ -29,11 +30,12 @@ a {
 }
 
 header {
+
+    display: -ms-flexbox;
     display: flex;
-//    -ms-display: -ms-flexbox;
-//    -ms-flex-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-//    -ms-flex-align: flex-start;
+    -ms-flex-align: flex-start;
     align-items: flex-start;
     padding: 20px;
     height: 20vh;
@@ -51,18 +53,19 @@ header a {
 }
 
 header nav {
+    /*display: -ms-flexbox;*/
     display: flex;
-//    -ms-display: -ms-flexbox;
-    flex-wrap: wrap;
-//    -ms-flex-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .topnav a {
     margin: 0 10px;
+    flex-wrap: wrap;
 }
 
 .sociallinks {
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 7rem;
 }
@@ -70,15 +73,20 @@ header nav {
 main {
     width: 60vw;
     margin: auto;
+    display: -ms-flexbox;
     display: flex;
-//    -ms-display: -ms-flexbox;
     flex-wrap: wrap;
-//    -ms-flex-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-//    -ms-flex-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 5rem;
     height: 60vh;
+}
+
+span {
+    display: block;
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -86,7 +94,7 @@ main {
         height: 140px;
     }
     main {
-//        -ms-flex-align: flex-start;
+        -ms-flex-align: flex-start;
         align-items: flex-start;
         width: 360px
     }
