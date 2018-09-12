@@ -45,7 +45,7 @@ header {
     font-family: "Brush Script MT", Arial, sans-serif;
     font-size: 3rem;
     display: block;
-    widows: 140px;
+    min-width: 140px;
 }
 
 header a {
@@ -75,7 +75,7 @@ header nav {
     flex-direction: column;
     -ms-flex-align: end;
     align-items: flex-end;
-    widows: 140px;
+    min-width: 140px;
 }
 
 .socialLinks a {
@@ -84,7 +84,7 @@ header nav {
 }
 
 main {
-    padding: 20vw;
+    padding: 0 20vw;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
