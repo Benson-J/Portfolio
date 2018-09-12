@@ -133,3 +133,9 @@ h1 {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+
+.borderLine{
+    height: 100%;
+    width: 1px;
+    background-color: #ffffff;
+}
