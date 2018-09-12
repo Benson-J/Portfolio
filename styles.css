@@ -127,15 +127,40 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 0;
+}
+
 .aboutWrapper {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    width: 100%;
 }
 
-.borderLine{
-    height: 100%;
-    width: 1px;
+.aboutWrapper div {
+    width: 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.aboutTopList {
+    padding: 0;
+}
+.skills {
+    text-align: center;
+}
+
+.experience {
+    text-align: right;
+}
+
+.borderLine {
+    min-height: 100%;
+    max-width: 1px;
     background-color: #ffffff;
+    margin: 5px 15px;
 }
