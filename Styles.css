@@ -30,7 +30,6 @@ a {
 }
 
 header {
-
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -40,7 +39,6 @@ header {
     padding: 20px;
     height: 20vh;
     min-height: 140px;
-    max-width: 100vw;
 }
 
 .Homebutton {
@@ -63,10 +61,12 @@ header nav {
     flex-wrap: wrap;
     -ms-flex-pack: center;
     justify-content: center;
+    max-width: 55vw;
 }
 
 .topnav a {
     margin: 0 10px;
+    display: block;
 }
 
 .sociallinks {
@@ -75,11 +75,11 @@ header nav {
     -ms-flex-align: end;
     align-items: flex-end;
     width: 7rem;
-    height: 2000px;
 }
 
 .sociallinks a {
     padding: 5px;
+    display: block;
 }
 
 main {
