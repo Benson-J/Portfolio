@@ -39,6 +39,7 @@ header {
     padding: 20px;
     height: 20vh;
     min-height: 140px;
+    max-width: 100vw;
 }
 
 .homeButton {
@@ -87,8 +88,6 @@ main {
     padding: 0 20vw;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-pack: center;
@@ -96,26 +95,16 @@ main {
     -ms-flex-align: center;
     align-items: center;
     height: 60vh;
+}
+
+.homeMain {
     background-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 75%);
 }
 
-@media only screen and (max-width: 600px) {
-    header {
-        height: 140px;
-    }
-    main {
-        padding: 0;
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .socialLinks {
-        display: none;
-    }
-    .topNav a {
-        margin: 0;
-    }
+.mainContent {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    max-width: 100%;
 }
 
 h1 {
@@ -127,6 +116,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
 .aboutWrapper {
     display: -ms-flexbox;
     display: flex;
@@ -134,8 +132,126 @@ h1 {
     justify-content: space-between;
 }
 
-.borderLine{
-    height: 100%;
-    width: 1px;
-    background-color: #ffffff;
+.aboutWrapper article {
+    padding: 0 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.aboutTopList {
+    padding: 0;
+}
+
+.experience {
+    text-align: right;
+    border-right: 1px solid #ffffff;
+}
+
+.skills {
+    text-align: center;
+    border-right: 1px solid #ffffff;
+}
+
+.portfolioMain {
+    padding: 0 5vw;
+    height: 60vh;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.mainContent {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.portfolioBox {
+    max-width: 30%;
+    min-width: 400px;
+    position: relative;
+    margin: 10px;
+}
+
+.portfolioBoxText {
+    padding: 10px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.portfolioBox img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.portfolioBox:hover img {
+    opacity: 1;
+}
+
+.portfolioBox:hover .portfolioBoxText {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+    .contactInfo {
+        font-size: 3.8rem;
+    }
+    .aboutWrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+    }
+    .borderLine {
+        min-width: 100%;
+        max-height: 0;
+        border: solid #ffffff;
+        border-width: 1px 0 0 0;
+        margin: 15px 5px;
+    }
+    .aboutWrapper article {
+        text-align: left;
+        padding: 15px;
+    }
+    .experience {
+        border-right: 0;
+        border-bottom: 1px solid #ffffff;
+    }
+    .skills {
+        border-right: 0;
+        border-bottom: 1px solid #ffffff;
+    }
+    .aboutMain {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 140px;
+    }
+    .socialLinks {
+        display: none;
+    }
+    main {
+        padding: 0;
+        width: 100%;
+    }
+    .portfolioBox {
+        min-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .topNav a {
+        margin: 0;
+    }
 }
