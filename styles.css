@@ -87,8 +87,6 @@ main {
     padding: 0 20vw;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-pack: center;
@@ -96,7 +94,15 @@ main {
     -ms-flex-align: center;
     align-items: center;
     height: 60vh;
+}
+
+.homeMain {
     background-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 75%);
+}
+
+.mainContent {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,6 +137,11 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
 .aboutWrapper {
     display: -ms-flexbox;
     display: flex;
@@ -150,6 +161,7 @@ ul {
 .aboutTopList {
     padding: 0;
 }
+
 .skills {
     text-align: center;
 }
@@ -163,4 +175,47 @@ ul {
     max-width: 1px;
     background-color: #ffffff;
     margin: 5px 15px;
+}
+
+.portfolioMain {
+    padding: 0 5vw;
+    height: 60vh;
+}
+
+.mainContent {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.portfolioBox {
+    width: 30%;
+    position: relative;
+    margin: 10px;
+}
+
+.portfolioBoxText {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.portfolioBox img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.portfolioBox:hover img {
+    opacity: 1;
+}
+
+.portfolioBox:hover .portfolioBoxText {
+    opacity: 0;
 }
