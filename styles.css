@@ -132,7 +132,7 @@ h3 {
     justify-content: space-between;
 }
 
-.aboutWrapper article{
+.aboutWrapper article {
     padding: 0 15px;
 }
 
@@ -146,14 +146,12 @@ ul {
 
 .experience {
     text-align: right;
-    border: solid #ffffff;
-    border-width: 0 1px 0 0;
+    border-right: 1px solid #ffffff;
 }
 
 .skills {
     text-align: center;
-    border: solid #ffffff;
-    border-width: 0 1px 0 0;
+    border-right: 1px solid #ffffff;
 }
 
 .portfolioMain {
@@ -223,10 +221,12 @@ ul {
         padding: 15px;
     }
     .experience {
-         border-width: 0 0 1px 0;
+        border-right: 0;
+        border-bottom: 1px solid #ffffff;
     }
     .skills {
-        border-width: 0 0 1px 0;
+        border-right: 0;
+        border-bottom: 1px solid #ffffff;
     }
     .aboutMain {
         -ms-flex-align: start;
