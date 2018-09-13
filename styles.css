@@ -186,6 +186,7 @@ ul {
 
 .portfolioBoxText {
     display: block;
+    padding: 10px;
     z-index: 10;
     position: absolute;
     top: 0;
