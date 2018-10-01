@@ -8,8 +8,9 @@ html {
 
 body {
     font-size: 2rem;
-    color: #000000;
-    background-image: url("background.jpeg");
+    color: #ffffff;
+    background-color: #000000;
+    background-image: url("images/background.jpeg");
     background-position: center;
     background-attachment: fixed;
     background-size: 100vw auto;
