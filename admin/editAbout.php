@@ -7,14 +7,13 @@
     <title>James | Admin/About</title>
 </head>
 <body>
-<h3>About title text</h3>
+    <h3>About title text</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="aboutTitle">Current text goes here</textarea><br>
+        <textarea name="aboutTitle">Current text goes here</textarea>
         <input type="submit">
     </form>
-    <?php
-    // Function that displays
-    ?>
+    <h3>Edit/Delete Items</h3>
+    <?php displayAboutEntries($db) ?>
     <a href="index.php">Back</a>
 </body>
 </html>
