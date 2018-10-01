@@ -4,13 +4,13 @@
 
 html {
     font-size: 62.5%;
-    /*font-size: 125%;*/
 }
 
 body {
     font-size: 2rem;
     color: #ffffff;
-    background-image: url("background.jpeg");
+    background-color: #000000;
+    background-image: url("images/background.jpeg");
     background-position: center;
     background-attachment: fixed;
     background-size: 100vw auto;
