@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../normalize.css">
-    <title>James | Admin/Home</title>
+    <title>James | Admin/About</title>
 </head>
 <body>
-<h3>Home title text</h3>
+<h3>About title text</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="homeTitle">Current text goes here</textarea><br>
+        <textarea name="aboutTitle">Current text goes here</textarea><br>
         <input type="submit">
     </form>
+    <?php
+    // Function that displays
+    ?>
     <a href="index.php">Back</a>
 </body>
 </html>
