@@ -8,10 +8,10 @@
     <title>James | Admin</title>
 </head>
 <body>
-    <a href="editHome.php">Home</a>
-    <a href="editAbout.php">About</a>
-    <a href="editPortfolio.php">Portfolio</a>
-    <a href="editContact.php">Contact</a>
+    <a href="editHome.php">Home</a><br>
+    <a href="editAbout.php">About</a><br>
+    <a href="editPortfolio.php">Portfolio</a><br>
+    <a href="editContact.php">Contact</a><br>
     <a href="editSocial.php">Social</a>
 </body>
 </html>
