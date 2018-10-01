@@ -8,6 +8,6 @@
     <title>James | Admin/Home</title>
 </head>
 <body>
-    <a href="admin.php">Back</a>
+    <a href="admin.php" title="Back to main admin page">Back</a>
 </body>
 </html>
