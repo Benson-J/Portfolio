@@ -15,7 +15,7 @@
     <h3>New Item</h3>
     <form method="post" action="dbEdit.php">
         <textarea name="socialIconNew"></textarea>
-        <textarea name="socialLinkNew"></textarea>
+        <textarea name="socialLinkNew"></textarea><br>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>

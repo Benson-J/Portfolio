@@ -9,7 +9,7 @@
 <body>
     <h3>Home Title Text</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="homeTitle"><?php echo displayTitle($db, 'home')?></textarea>
+        <textarea name="homeTitle"><?php echo displayTitle($db, 'home')?></textarea><br>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>

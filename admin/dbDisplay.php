@@ -3,9 +3,9 @@
 $db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$stmtAbout = $db->query('SELECT `about`.`id`,`about`.`text` AS `A`,`aboutTypes`.`column` AS `B` FROM `about` JOIN `aboutTypes` ON `about`.`column_id` = `aboutTypes`.`id`;');
-$stmtContact = $db->query('SELECT `id`,`text` AS `A`,`link` AS `B` FROM `contact`;');
-$stmtSocial = $db->query('SELECT `id`,`icon` AS `A`,`link` AS `B` FROM `socialLinks`;');
+$stmtAbout = $db->query('SELECT `about`.`id`,`about`.`text` AS `infoA`,`aboutTypes`.`column` AS `infoB` FROM `about` JOIN `aboutTypes` ON `about`.`column_id` = `aboutTypes`.`id`;');
+$stmtContact = $db->query('SELECT `id`,`text` AS `infoA`,`link` AS `infoB` FROM `contact`;');
+$stmtSocial = $db->query('SELECT `id`,`icon` AS `infoA`,`link` AS `infoB` FROM `socialLinks`;');
 
 /*
  * Displays heading text of a given page
@@ -31,8 +31,8 @@ function displayEntries($stmt, string $pageName) : void
     $data = $stmt->fetchAll();
     foreach ($data as $row) {
         echo '
-        <textarea name="' . $pageName . $row['id'] . 'A">' . $row['A'] . '</textarea>
-        <textarea name="' . $pageName . $row['id'] . 'B">' . $row['B'] . '</textarea>
+        <textarea name="' . $pageName . $row['id'] . 'A">' . $row['infoA'] . '</textarea>
+        <textarea name="' . $pageName . $row['id'] . 'B">' . $row['infoB'] . '</textarea>
         Check to delete:<input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
 }
@@ -47,14 +47,11 @@ function displayPortfolio($db) : void {
     $data = $stmt->fetchAll();
     foreach ($data as $row) {
         echo '
-        <form method="post" action="dbEdit.php">
             <textarea name="portfolioName' . $row['id'] . '">' . $row['title'] . '</textarea>
             <textarea name="portfolioLink' . $row['id'] . '">' . $row['link'] . '</textarea>
             <textarea name="portfolioGithub' . $row['id'] . '">' . $row['github'] . '</textarea>
             <textarea name="portfolioImage' . $row['id'] . '">' . $row['image'] . '</textarea>
             <textarea name="portfolioDescription' . $row['id'] . '">' . $row['description'] . '</textarea>
-            Check to delete:<input type="checkbox" name="delete' . $row['id'] . '">
-            <input type="submit">
-        </form>';
+            Check to delete:<input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
 }

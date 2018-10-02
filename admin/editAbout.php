@@ -9,7 +9,7 @@
 <body>
     <h3>About Title Text</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="aboutTitle"><?php echo displayTitle($db, 'about')?></textarea>
+        <textarea name="aboutTitle"><?php echo displayTitle($db, 'about')?></textarea><br>
         <input type="submit">
     </form>
     <h3>Edit/Delete Items</h3>
@@ -20,7 +20,7 @@
     <h3>New Item</h3>
     <form method="post" action="dbEdit.php">
         <textarea name="aboutInfoTextNew"></textarea>
-        <textarea name="aboutInfoTypeNew"></textarea>
+        <textarea name="aboutInfoTypeNew"></textarea><br>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>
