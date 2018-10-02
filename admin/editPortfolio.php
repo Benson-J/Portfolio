@@ -4,22 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../normalize.css">
-    <title>James | Admin/About</title>
+    <title>James | Admin/Portfolio</title>
 </head>
 <body>
-    <h3>About title text</h3>
+    <h3>Portfolio title text</h3>
     <form method="get" action="dbEdit.php">
         <textarea name="aboutTitle">Current text goes here</textarea>
         <input type="submit">
     </form>
     <h3>Edit/Delete Items</h3>
     <?php displayAboutEntries($db) ?>
-    <h3>New Item</h3>
-    <form method="get" action="dbEdit.php">
-        <textarea name="aboutInfoTextNew"></textarea>
-        <input type="text" name="aboutInfoTypeNew">
-        <input type="submit">
-    </form>
     <a href="index.php">Back</a>
 </body>
 </html>

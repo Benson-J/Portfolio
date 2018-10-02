@@ -6,10 +6,10 @@
     <title>James | Admin</title>
 </head>
 <body>
-    <a href="editHome.php">Home</a><br>
-    <a href="editAbout.php">About</a><br>
-    <a href="editPortfolio.php">Portfolio</a><br>
-    <a href="editContact.php">Contact</a><br>
-    <a href="editSocial.php">Social</a>
+    <a href="editHome.php" title="Edit the home page">Home</a><br>
+    <a href="editAbout.php" title="Edit the about page">About</a><br>
+    <a href="editPortfolio.php" title="Edit the portfolio page">Portfolio</a><br>
+    <a href="editContact.php" title="Edit the contact page">Contact</a><br>
+    <a href="editSocial.php" title="Edit the social links">Social</a>
 </body>
 </html>
