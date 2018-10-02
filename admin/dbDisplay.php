@@ -26,27 +26,34 @@ function displayTitle($db, string $pageName) : string {
  * Echoes 2 form inputs & a checkbox per item, for editing or deleting
  *
  * @param $stmt is the object containing the default info for the inputs
+ * @param $pageName is the name if the page that needs the data
+ *
+ * @return string is the html for the form text inputs & delete checkboxes
  */
-function displayEntries($stmt, string $pageName) : void
-{
+function displayEntries($stmt, string $pageName) : string {
     $data = $stmt->fetchAll();
+    $echoedString = '';
     foreach ($data as $row) {
-        echo '
+        $echoedString .= '
         <textarea name="' . $pageName . $row['id'] . 'A">' . $row['infoA'] . '</textarea>
         <textarea name="' . $pageName . $row['id'] . 'B">' . $row['infoB'] . '</textarea>
         Check to delete: <input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
+    return $echoedString;
 }
 
 /*
  * Echoes a set of forms containing items on portfolio page, for editing or deleting them
  *
- * @param $db is the database containing the items
+ * @param $stmt is the statement containing all the portfolio items
+ *
+ * @return string is the html for the form text inputs & delete checkboxes
  */
-function displayPortfolio($stmt) : void {
+function displayPortfolio($stmt) : string {
     $data = $stmt->fetchAll();
+    $echoedString = '';
     foreach ($data as $row) {
-        echo '
+        $echoedString .= '
             <textarea name="portfolioName' . $row['id'] . '">' . $row['title'] . '</textarea>
             <textarea name="portfolioLink' . $row['id'] . '">' . $row['link'] . '</textarea>
             <textarea name="portfolioGithub' . $row['id'] . '">' . $row['github'] . '</textarea>
@@ -54,6 +61,7 @@ function displayPortfolio($stmt) : void {
             <textarea name="portfolioDescription' . $row['id'] . '">' . $row['description'] . '</textarea>
             Check to delete: <input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
+    return $echoedString;
 }
 
 /*
@@ -61,7 +69,7 @@ function displayPortfolio($stmt) : void {
  *
  * @return string is html displaying image, image name, & deletion checkbox
  */
-function displayImages() : string{
+function displayImages() : string {
     $imageList = scandir('../images');
     $echoedString = '';
     foreach ($imageList as $image) {

@@ -10,7 +10,6 @@
     <h3>Delete Images</h3>
     <form action="deleteImage.php" method="post" enctype="multipart/form-data">
         <?php echo displayImages(); ?>
-<!--        --><?php //var_dump(scandir('../images')); ?>
         <input type="submit">
     </form>
     <h3>Upload Image</h3>
