@@ -6,6 +6,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $stmtAbout = $db->query('SELECT `about`.`id`,`about`.`text` AS `infoA`,`aboutTypes`.`column` AS `infoB` FROM `about` JOIN `aboutTypes` ON `about`.`column_id` = `aboutTypes`.`id`;');
 $stmtContact = $db->query('SELECT `id`,`text` AS `infoA`,`link` AS `infoB` FROM `contact`;');
 $stmtSocial = $db->query('SELECT `id`,`icon` AS `infoA`,`link` AS `infoB` FROM `socialLinks`;');
+$stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
 
 /*
  * Displays heading text of a given page
@@ -33,7 +34,7 @@ function displayEntries($stmt, string $pageName) : void
         echo '
         <textarea name="' . $pageName . $row['id'] . 'A">' . $row['infoA'] . '</textarea>
         <textarea name="' . $pageName . $row['id'] . 'B">' . $row['infoB'] . '</textarea>
-        Check to delete:<input type="checkbox" name="delete' . $row['id'] . '"><br>';
+        Check to delete: <input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
 }
 
@@ -42,8 +43,7 @@ function displayEntries($stmt, string $pageName) : void
  *
  * @param $db is the database containing the items
  */
-function displayPortfolio($db) : void {
-    $stmt = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
+function displayPortfolio($stmt) : void {
     $data = $stmt->fetchAll();
     foreach ($data as $row) {
         echo '
@@ -52,6 +52,22 @@ function displayPortfolio($db) : void {
             <textarea name="portfolioGithub' . $row['id'] . '">' . $row['github'] . '</textarea>
             <textarea name="portfolioImage' . $row['id'] . '">' . $row['image'] . '</textarea>
             <textarea name="portfolioDescription' . $row['id'] . '">' . $row['description'] . '</textarea>
-            Check to delete:<input type="checkbox" name="delete' . $row['id'] . '"><br>';
+            Check to delete: <input type="checkbox" name="delete' . $row['id'] . '"><br>';
     }
+}
+
+/*
+ * Checks each non-hidden file in image folder, & outputs into html
+ *
+ * @return string is html displaying image, image name, & deletion checkbox
+ */
+function displayImages() : string{
+    $imageList = scandir('../images');
+    $echoedString = '';
+    foreach ($imageList as $image) {
+        if ($image[0] != '.') {
+            $echoedString .= '<img width="200px" src=../images/' . $image . '> ' . $image . ' , Check to delete: <input type="checkbox" name="delete' . $image . '"><br>';
+        }
+    }
+    return $echoedString;
 }
