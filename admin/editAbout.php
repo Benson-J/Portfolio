@@ -9,7 +9,7 @@
 <body>
     <h3>About title text</h3>
     <form method="get" action="dbEdit.php">
-        <textarea name="aboutTitle">Current text goes here</textarea>
+        <textarea name="aboutTitle"><?php echo displayTitle($db, 'about')?></textarea>
         <input type="submit">
     </form>
     <h3>Edit/Delete Items</h3>

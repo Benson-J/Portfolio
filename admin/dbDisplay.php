@@ -3,7 +3,16 @@
 $db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-function displayTitle($db, string $pageName) {
+
+/*
+ * Displays title text of a given page
+ *
+ * @param $db is the database containing the title text
+ * @param string $pageName is the name of the page whose title will be displayed
+ *
+ * @return string is the title text of the chosen page
+ */
+function displayTitle($db, string $pageName) : string{
     $stmt = $db->query('SELECT `content` FROM `titles` WHERE `page` = "' . $pageName . '";');
     $data = $stmt->fetch();
     return $data['content'];
