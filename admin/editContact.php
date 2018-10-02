@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../normalize.css">
-    <title>James | Admin/Portfolio</title>
+    <title>James | Admin/Contact</title>
 </head>
 <body>
     <h3>Edit/Delete Items</h3>
-    <?php displayPortfolio($db) ?>
+    <form method="post" action="dbEdit.php">
+        <?php displayEntries($stmtContact, 'contact') ?>
+        <input type="submit">
+    </form>
     <h3>New Item</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="portfolioNameNew"></textarea>
-        <textarea name="portfolioLinkNew"></textarea>
-        <textarea name="portfolioGithubNew"></textarea>
-        <textarea name="portfolioImageNew"></textarea>
-        <textarea name="portfolioDescriptionNew"></textarea>
+        <textarea name="aboutTextNew"></textarea>
+        <textarea name="aboutTypeNew"></textarea>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>

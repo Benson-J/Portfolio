@@ -7,8 +7,8 @@
     <title>James | Admin/Home</title>
 </head>
 <body>
-<h3>Home title text</h3>
-    <form method="get" action="dbEdit.php">
+    <h3>Home Title Text</h3>
+    <form method="post" action="dbEdit.php">
         <textarea name="homeTitle"><?php echo displayTitle($db, 'home')?></textarea>
         <input type="submit">
     </form>

@@ -7,17 +7,20 @@
     <title>James | Admin/About</title>
 </head>
 <body>
-    <h3>About title text</h3>
-    <form method="get" action="dbEdit.php">
+    <h3>About Title Text</h3>
+    <form method="post" action="dbEdit.php">
         <textarea name="aboutTitle"><?php echo displayTitle($db, 'about')?></textarea>
         <input type="submit">
     </form>
     <h3>Edit/Delete Items</h3>
-    <?php displayAboutEntries($db) ?>
+    <form method="post" action="dbEdit.php">
+        <?php displayEntries($stmtAbout, 'about') ?>
+        <input type="submit">
+    </form>
     <h3>New Item</h3>
-    <form method="get" action="dbEdit.php">
+    <form method="post" action="dbEdit.php">
         <textarea name="aboutInfoTextNew"></textarea>
-        <input type="text" name="aboutInfoTypeNew">
+        <textarea name="aboutInfoTypeNew"></textarea>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>
