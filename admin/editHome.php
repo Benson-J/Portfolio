@@ -8,7 +8,7 @@
 </head>
 <body>
 <h3>Home title text</h3>
-    <form method="post" action="dbEdit.php">
+    <form method="get" action="dbEdit.php">
         <textarea name="homeTitle">Current text goes here</textarea><br>
         <input type="submit">
     </form>
