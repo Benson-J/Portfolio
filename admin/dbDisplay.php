@@ -20,12 +20,13 @@ function displayPortfolio(array $data) : string {
             return 'Invalid array passed';
         }
         $echoedString .= '
-            <textarea name="portfolioName' . $row['id'] . '">' . $row['title'] . '</textarea>
-            <textarea name="portfolioLink' . $row['id'] . '">' . $row['link'] . '</textarea>
-            <textarea name="portfolioGithub' . $row['id'] . '">' . $row['github'] . '</textarea>
-            <textarea name="portfolioImage' . $row['id'] . '">' . $row['image'] . '</textarea>
-            <textarea name="portfolioDescription' . $row['id'] . '">' . $row['description'] . '</textarea>
-            Check to delete: <input type="checkbox" name="delete' . $row['id'] . '"><br>';
+            <input type="hidden" name="' . $row['id'] . '[id]" value="' . $row['id'] . '">
+            <textarea name="' . $row['id'] . '[name]">' . $row['title'] . '</textarea>
+            <textarea name="' . $row['id'] . '[link]">' . $row['link'] . '</textarea>
+            <textarea name="' . $row['id'] . '[github]">' . $row['github'] . '</textarea>
+            <textarea name="' . $row['id'] . '[image]">' . $row['image'] . '</textarea>
+            <textarea name="' . $row['id'] . '[description]">' . $row['description'] . '</textarea>
+            Check to delete: <input type="checkbox" name="' . $row['id'] . '[delete]"><br>';
     }
     return $echoedString;
 }

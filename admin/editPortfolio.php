@@ -14,11 +14,11 @@
     </form>
     <h3>New Item</h3>
     <form method="post" action="dbEdit.php">
-        <textarea name="portfolioNameNew"></textarea>
-        <textarea name="portfolioLinkNew"></textarea>
-        <textarea name="portfolioGithubNew"></textarea>
-        <textarea name="portfolioImageNew"></textarea>
-        <textarea name="portfolioDescriptionNew"></textarea><br>
+        <textarea name="name"></textarea>
+        <textarea name="link"></textarea>
+        <textarea name="github"></textarea>
+        <textarea name="image"></textarea>
+        <textarea name="description"></textarea><br>
         <input type="submit">
     </form>
     <a href="index.php">Back</a>
