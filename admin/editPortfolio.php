@@ -1,4 +1,9 @@
-<?php require('dbDisplay.php'); ?>
+<?php
+require ('dbStream.php');
+$stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
+$dataPortfolio = $stmtPortfolio->fetchAll();
+require('dbDisplay.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

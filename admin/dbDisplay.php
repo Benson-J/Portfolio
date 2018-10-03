@@ -1,10 +1,5 @@
 <?php
 
-require ('dbStream.php');
-
-$stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
-$dataPortfolio = $stmtPortfolio->fetchAll();
-
 /*
  * Echoes a set of forms containing items on portfolio page, for editing or deleting them
  *

@@ -6,10 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase {
     public function testdisplayPortfolio_success() {
-        $db = new PDO('mysql:dbname=testPortfolioJames;host=127.0.0.1', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $stmt = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
-        $data = $stmt->fetchAll();
+        $data = [[[],[],[],[],[],[]],[[],[],[],[],[],[]],[[],[],[],[],[],[]]]; // 1 containing 3 containing 6 each
 
         $output = displayPortfolio($data);
 
