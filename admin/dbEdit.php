@@ -1,7 +1,6 @@
 <?php
 
-$db = new PDO('mysql:dbname=portfolioJames;host=127.0.0.1', 'root');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+require ('dbStream.php');
 
 if (array_key_exists ('name', $_POST)) {
     $stmt = $db->prepare('INSERT INTO `portfolio` (`title`,`link`,`github`,`image`,`description`) VALUES (:title, :link, :github, :image, :description);');
