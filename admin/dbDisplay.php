@@ -1,13 +1,13 @@
 <?php
 
 /*
- * Echoes a set of forms containing items on portfolio page, for editing or deleting them
+ * Returns a set of forms containing items on portfolio page, for editing or deleting them
  *
  * @param array $data is the array containing all the portfolio items
  *
  * @return string is the html for the form text inputs & delete checkboxes
  */
-function displayPortfolio(array $data) : string {
+function displayPortfolio (array $data) : string {
     $echoedString = '';
     foreach ($data as $row) {
         if (count($row) != 6) {

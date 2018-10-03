@@ -197,7 +197,7 @@ ul {
 }
 
 .portfolioBox:hover .portfolioBoxText {
-    opacity: 0;
+    display: none;
 }
 
 @media only screen and (max-width: 1050px) {

@@ -26,6 +26,6 @@ require('dbDisplay.php');
         <textarea name="description" placeholder="Description"></textarea><br>
         <input type="submit">
     </form>
-    <a href="index.php" title ="Back to dashboard">Back</a>
+    <a href="index.php" title="Back to dashboard">Back</a>
 </body>
 </html>

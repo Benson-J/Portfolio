@@ -21,7 +21,7 @@ class StackTest extends TestCase {
         $this->assertequals('Invalid array passed', $output);
     }
 
-    public function testdisplayPortfolio_malformed() {
+    public function testdisplayPortfolio_malformed_wrongdatatype() {
 
         $this->expectException(TypeError::class);
         $output = displayPortfolio('x');
