@@ -23,7 +23,7 @@ $dataPortfolio = $stmtPortfolio->fetchAll();
 function displayTitle(PDO $db, string $pageName) : string {
     $stmt = $db->query('SELECT `content` FROM `titles` WHERE `page` = "' . $pageName . '";');
     $data = $stmt->fetch();
-    return $data;
+    return $data['content'];
 }
 
 /*

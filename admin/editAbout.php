@@ -14,7 +14,7 @@
     </form>
     <h3>Edit/Delete Items</h3>
     <form method="post" action="dbEdit.php">
-        <?php echo displayEntries($stmtAbout, 'about') ?>
+        <?php echo displayEntries($dataAbout, 'about') ?>
         <input type="submit">
     </form>
     <h3>New Item</h3>

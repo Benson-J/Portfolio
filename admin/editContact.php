@@ -9,7 +9,7 @@
 <body>
     <h3>Edit/Delete Items</h3>
     <form method="post" action="dbEdit.php">
-        <?php echo displayEntries($stmtContact, 'contact') ?>
+        <?php echo displayEntries($dataContact, 'contact') ?>
         <input type="submit">
     </form>
     <h3>New Item</h3>
