@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO('mysql:dbname=portfolio;host=127.0.0.1', 'root');
+$db = new PDO('mysql:dbname=portfolioJames;host=127.0.0.1', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
@@ -14,9 +14,11 @@ $dataPortfolio = $stmtPortfolio->fetchAll();
  * @return string is the html for the form text inputs & delete checkboxes
  */
 function displayPortfolio(array $data) : string {
-    
     $echoedString = '';
     foreach ($data as $row) {
+        if (count($row) != 6) {
+            return 'Invalid array passed';
+        }
         $echoedString .= '
             <textarea name="portfolioName' . $row['id'] . '">' . $row['title'] . '</textarea>
             <textarea name="portfolioLink' . $row['id'] . '">' . $row['link'] . '</textarea>
