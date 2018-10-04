@@ -35,5 +35,5 @@ class StackTest extends TestCase {
     $output = checkSession([]);
 
     $this->assertEquals('login.php?error=2', $output);
-}
+    }
 }
