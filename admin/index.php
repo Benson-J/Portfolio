@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+require('../functions/login.php');
+header('Location: ' . checkSession($_SESSION['loggedIn']));
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +14,6 @@
 </head>
 <body>
     <a href="editPortfolio.php" title="Edit the portfolio page">Portfolio</a><br>
+    <a href="logout.php" title="Log out">Log out</a><br>
 </body>
 </html>
