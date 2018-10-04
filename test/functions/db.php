@@ -5,21 +5,25 @@ require('../../functions/db.php');
 use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase {
-    public function testcheckArrayCount_success_correctArray() {
+    public function testcheckArrayCount_success() {
         $array = [[],[]];
         $count = 2;
         $output = checkArrayCount($array, $count);
 
         $this->assertNull($output);
     }
-    public function testcheckArrayCount_success_incorrectArray() {
+    public function testcheckArrayCount_failure() {
         $array = [[],[]];
         $count = 3;
         $output = checkArrayCount($array, $count);
 
         $this->assertequals('Invalid array passed', $output);
     }
+    public function testArrayCount_malformed_wrongdatatype() {
 
+        $this->expectException(TypeError::class);
+        checkArrayCount('x', 'x');
+    }
 
     public function testshowProjects_success() {
         $data = [[[],[],[],[],[]],[[],[],[],[],[]],[[],[],[],[],[]]]; // 1 containing 3 containing 5 each
@@ -44,6 +48,6 @@ class StackTest extends TestCase {
     public function testdisplayPortfolio_malformed_wrongdatatype() {
 
         $this->expectException(TypeError::class);
-        $output = displayPortfolio('x');
+        displayPortfolio('x');
     }
 }
