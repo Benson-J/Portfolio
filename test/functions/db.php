@@ -20,33 +20,28 @@ class StackTest extends TestCase {
         $this->assertequals('Invalid array passed', $output);
     }
     public function testArrayCount_malformed_wrongdatatype() {
-
         $this->expectException(TypeError::class);
         checkArrayCount('x', 'x');
     }
 
     public function testshowProjects_success() {
         $data = [[[],[],[],[],[]],[[],[],[],[],[]],[[],[],[],[],[]]]; // 1 containing 3 containing 5 each
-
         $output = showProjects($data);
 
         $this->assertInternalType('string', $output);
     }
     public function testshowProjects_malformed_wrongdatatype() {
-
         $this->expectException(TypeError::class);
         $output = showProjects('x');
     }
 
     public function testdisplayPortfolio_success() {
         $data = [[[],[],[],[],[],[]],[[],[],[],[],[],[]],[[],[],[],[],[],[]]]; // 1 containing 3 containing 6 each
-
         $output = displayPortfolio($data);
 
         $this->assertInternalType('string', $output);
     }
     public function testdisplayPortfolio_malformed_wrongdatatype() {
-
         $this->expectException(TypeError::class);
         displayPortfolio('x');
     }

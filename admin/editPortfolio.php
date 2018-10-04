@@ -1,8 +1,14 @@
 <?php
-require ('dbStream.php');
+
+session_start();
+require_once('../functions/login.php');
+header('Location: ' . checkSession($_SESSION['loggedIn']));
+
+require_once('dbStream.php');
+require_once('../functions/db.php');
 $stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
 $dataPortfolio = $stmtPortfolio->fetchAll();
-require('../functions/db.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
