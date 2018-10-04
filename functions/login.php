@@ -9,7 +9,7 @@
  * @return string is the redirect location
  */
 function verifyPassword (string $user, string $pass) : string {
-    if (array_key_exists($user,LOGINLIST) && password_verify($pass, LOGINLIST[$user])) {
+    if (password_verify($pass, LOGINLIST[$user])) {
         $_SESSION['loggedIn'] = 1;
         return 'index.php';
     } else {
@@ -25,7 +25,7 @@ function verifyPassword (string $user, string $pass) : string {
  * @return is the redirect location
  */
 function checkSession($sessID) {
-    if (!$sessID) {
+    if ($sessID !== 1) {
         return 'login.php?error=2';
     }
 }

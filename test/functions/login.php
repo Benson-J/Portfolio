@@ -31,4 +31,9 @@ class StackTest extends TestCase {
 
         $this->assertEquals('login.php?error=2', $output);
     }
+    public function testcheckSession_malformed_wrongdatatype() {
+    $output = checkSession([]);
+
+    $this->assertEquals('login.php?error=2', $output);
+}
 }
