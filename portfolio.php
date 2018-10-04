@@ -2,8 +2,7 @@
 require ('admin/dbStream.php');
 $stmtPortfolio = $db->query('SELECT `title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
 $dataPortfolio = $stmtPortfolio->fetchAll();
-require('admin/dbDisplay.php');
-require('outputPortfolio.php');
+require('functions/db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +30,7 @@ require('outputPortfolio.php');
     </header>
     <main class="portfolioMain">
         <div class="mainContent">
-            <?php echo outputPortfolio($dataPortfolio); ?>
+            <?php echo showProjects($dataPortfolio); ?>
         </div>
     </main>
 </body>
