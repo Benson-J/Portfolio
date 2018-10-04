@@ -5,11 +5,12 @@
  *
  * @param string $user is the input username
  * @param string $password is the input password
+ * @param array $credList is the array of usernames (keys) & passwords (values)
  *
  * @return string is the redirect location
  */
-function verifyPassword (string $user, string $pass) : string {
-    if (password_verify($pass, LOGINLIST[$user])) {
+function verifyPassword (string $user, string $pass, array $credList) : string {
+    if (password_verify($pass, $credList[$user])) {
         $_SESSION['loggedIn'] = 1;
         return 'index.php';
     } else {

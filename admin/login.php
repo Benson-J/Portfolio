@@ -6,7 +6,7 @@ const LOGINLIST = ['admin' => '$2y$10$i/I2uaPwmad5zPeSdpLSzuJpvgCbxk6YSuHlCjD7sE
 require('../functions/login.php');
 
 if (isset($_POST['user']) || isset($_POST['pass'])) {
-    header('Location: ' . verifyPassword($_POST['user'], $_POST['pass']));
+    header('Location: ' . verifyPassword($_POST['user'], $_POST['pass'], LOGINLIST));
 }
 if ($_SESSION['loggedIn']) {
     header('Location: index.php');

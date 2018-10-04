@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+require('../functions/login.php');
+header('Location: ' . checkSession($_SESSION['loggedIn']));
+
 require ('dbStream.php');
 
 if (array_key_exists ('name', $_POST)) {

@@ -14,6 +14,6 @@ header('Location: ' . checkSession($_SESSION['loggedIn']));
 </head>
 <body>
     <a href="editPortfolio.php" title="Edit the portfolio page">Portfolio</a><br>
-    <a href="logout.php" title="Log out">Log out</a><br>
+    <a href="logout.php" title="Log out">Log out</a>
 </body>
 </html>
