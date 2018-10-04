@@ -3,7 +3,7 @@
 session_start();
 const LOGINLIST = ['admin' => '$2y$10$i/I2uaPwmad5zPeSdpLSzuJpvgCbxk6YSuHlCjD7sE7BO116JflEW'];
 
-require('../functions/login.php');
+require_once('../functions/login.php');
 
 if (isset($_POST['user']) || isset($_POST['pass'])) {
     header('Location: ' . verifyPassword($_POST['user'], $_POST['pass'], LOGINLIST));

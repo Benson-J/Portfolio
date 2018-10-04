@@ -1,10 +1,10 @@
 <?php
 
 session_start();
-require('../functions/login.php');
+require_once('../functions/login.php');
 header('Location: ' . checkSession($_SESSION['loggedIn']));
 
-require ('dbStream.php');
+require_once('dbStream.php');
 
 if (array_key_exists ('name', $_POST)) {
     $stmt = $db->prepare('INSERT INTO `portfolio` (`title`,`link`,`github`,`image`,`description`) VALUES (:title, :link, :github, :image, :description);');

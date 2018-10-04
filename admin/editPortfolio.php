@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-require('../functions/login.php');
+require_once('../functions/login.php');
 header('Location: ' . checkSession($_SESSION['loggedIn']));
 
-require ('dbStream.php');
-require('../functions/db.php');
+require_once('dbStream.php');
+require_once('../functions/db.php');
 $stmtPortfolio = $db->query('SELECT `id`,`title`,`link`,`github`,`image`,`description` FROM `portfolio`;');
 $dataPortfolio = $stmtPortfolio->fetchAll();
 

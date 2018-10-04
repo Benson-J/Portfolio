@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require('../functions/login.php');
+require_once('../functions/login.php');
 header('Location: ' . checkSession($_SESSION['loggedIn']));
 
 ?>
