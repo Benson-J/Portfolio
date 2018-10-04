@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-const LOGINLIST = ['admin' => '$2y$10$i/I2uaPwmad5zPeSdpLSzuJpvgCbxk6YSuHlCjD7sE7BO116JflEW'];
+const LOGINLIST = ['admin' => '$2y$10$rH4rsGxwfmqH...bZBYoAecNRLsQ0jqKBewLolFEMg3JkzRK4absq'];
 
 require_once('../functions/login.php');
 
