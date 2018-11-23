@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-const LOGINLIST = ['admin' => '$2y$10$rH4rsGxwfmqH...bZBYoAecNRLsQ0jqKBewLolFEMg3JkzRK4absq'];
+const LOGINLIST = ['admin' => '$2y$10$zGq0syJvTon0Zcfdyk7Ax.lx8AutGdl5PW.gRPISe56R4W47BMc6O'];
+// Password is 1234
 
 require_once('../functions/login.php');
 
