@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Checks that the passed array has the right number of items
  *
  * @param array $array is the array to be checked
@@ -14,7 +14,7 @@ function checkArrayCount (array $array, int $count) {
     }
 }
 
-/*
+/**
  * Returns a set of forms containing items on portfolio page, for editing or deleting them
  *
  * @param array $data is the array containing all the portfolio items
@@ -38,7 +38,7 @@ function displayPortfolio (array $data) : string {
     return $echoedString;
 }
 
-/*
+/**
  * Turns the database list of portfolio items into html displaying the items
  *
  * @param array $data is the array containing all the portfolio items
