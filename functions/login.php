@@ -1,10 +1,10 @@
 <?php
 
-/*
+/**
  * Checks that username & password are correct
  *
  * @param string $user is the input username
- * @param string $password is the input password
+ * @param string $pass is the input password
  * @param array $credList is the array of usernames (keys) & passwords (values)
  *
  * @return string is the redirect location
@@ -18,12 +18,12 @@ function verifyPassword (string $user, string $pass, array $credList) : string {
     }
 }
 
-/*
+/**
  * Checks if the user is not logged in
  *
  * @param $sessID is the session data storing 1 if logged in
  *
- * @return is the redirect location
+ * @return string is the redirect location
  */
 function checkSession($sessID) {
     if ($sessID !== 1) {
